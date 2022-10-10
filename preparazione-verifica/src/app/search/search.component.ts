@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { query } from '@angular/animations';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() {
+    
+   }
+   Submit(query: HTMLInputElement): void{
+  }
   ngOnInit(): void {
   }
 
