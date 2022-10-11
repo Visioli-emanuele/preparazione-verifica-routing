@@ -1,3 +1,8 @@
 <p>inserisci l'id: </p>
   <input type="text" #newquery>
   <button (click)="submit(newquery)">Search</button>
+
+  <h1>{{ cibo.generic_name }}</h1>
+  <p>
+      <img src="{{cibo.product.image_front_small_url}}">
+  </p>
