@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { query } from '@angular/animations';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CiboService } from '../cibo.service';
 
 @Component({
   selector: 'app-items',
@@ -6,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
+  constructor(public cibo: CiboService) {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }
