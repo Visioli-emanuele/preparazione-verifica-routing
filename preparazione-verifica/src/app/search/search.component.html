@@ -1,8 +1,9 @@
 <p>inserisci l'id: </p>
   <input type="text" #newquery>
   <button (click)="submit(newquery)">Search</button>
-
-  <h1>{{ cibo.generic_name }}</h1>
-  <p>
-      <img src="{{cibo.product.image_front_small_url}}">
-  </p>
+  <div *ngFor= " let c of results.products">
+    <h1>{{ c.generic_name }}</h1>
+    <p>
+      <img src="{{c.image_front_small_url}}">
+    </p>
+</div>
