@@ -1,9 +1,26 @@
-<p>inserisci l'id: </p>
-  <input type="text" #newquery>
-  <button (click)="submit(newquery)">Search</button>
-  <div *ngFor= " let c of results.products">
-    <h1>{{ c.generic_name }}</h1>
-    <p>
-      <img src="{{c.image_front_small_url}}">
-    </p>
+<div class="container">
+  <p>
+    <label class="txt">Product Name:</label><br>
+    <input class="form-control input" type="text" #query><br>
+    <button class="btn btn-primary" (click)="submit(query)">Search</button>
+  </p>
+
+  <div *ngIf="results">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 mb-5" *ngFor="let t of results.products">
+        <div class="thumbnail" style="border: 1px solid black">
+
+          <div class="content">
+            <img src="{{t.image_url}}" class="img-fluid" alt="">
+            <h1 >{{t.brands}}</h1>
+            <a [routerLink]="['/item', t.id]">
+              <span class="ciao" >Find Out More</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
